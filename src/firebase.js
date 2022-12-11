@@ -25,7 +25,7 @@ const database = getFirestore(app);
 
 // Get a list of films from your database
 async function getNews(database) {
-    const newsCol = collection(database, 'Films');
+    const newsCol = collection(database, 'News');
     const newsSnapshot = await getDocs(newsCol);
     const newsList = newsSnapshot.docs.map(doc => doc.data());
     return newsList;
