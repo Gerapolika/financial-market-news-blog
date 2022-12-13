@@ -1,12 +1,9 @@
 // Import the functions you need from the SDKs you need 
 import { initializeApp } from 'firebase/app';
 import { getStorage } from "firebase/storage";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
-
-// TODO: Add SDKs for Firebase products that you want to use 
-// https://firebase.google.com/docs/web/setup#available-libraries 
 
 // Your web app's Firebase configuration 
 const firebaseConfig = {
@@ -21,7 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase 
 const app = initializeApp(firebaseConfig);
-const database = getFirestore(app);
+export const database = getFirestore(app);
 
 // Get a list of films from your database
 async function getNews(database) {
